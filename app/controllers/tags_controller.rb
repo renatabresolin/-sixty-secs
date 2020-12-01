@@ -1,5 +1,5 @@
 class TagsController < ApplicationController
   def index
-    @tags = Tag.all
+    @tags = Tag.where(category: "ocasião")
   end
 end

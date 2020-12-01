@@ -25,7 +25,7 @@ class ApparelsController < ApplicationController
   private
 
   def apparel_params
-    params.require(:apparel).permit(:style)
+    params.require(:apparel).permit(:style, :photo)
   end
 
 end

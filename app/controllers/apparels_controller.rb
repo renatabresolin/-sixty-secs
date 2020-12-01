@@ -3,6 +3,10 @@ class ApparelsController < ApplicationController
     @apparels = Apparel.all
   end
 
+  def show
+    @apparel = Apparel.find(params[:id])
+  end
+
   def new
     @apparel = Apparel.new
   end

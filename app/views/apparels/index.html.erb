@@ -1,0 +1,8 @@
+<% @apparels.each do |apparel| %>
+  <%= apparel.style %>
+  <ul>
+    <% apparel.categories.each do |category| %>
+      <li> <%= category.tag.category %> <%= category.tag.content %> </li>
+    <% end %>
+  </ul>
+<% end %>

@@ -8,14 +8,20 @@ class ApparelsController < ApplicationController
   end
 
   def create
-    @apparel = Apparel.find(params[:id])
-    @tags = Tag.find(params[:plant_tag][:tag])
+    @apparel = Apparel.new(apparel_params)
+    if @apparel.save
+      @tags = Tag.find(params[:apparel][:tags])
+      @tags.each do |tag|
+        Category.create(apparel: @apparel, tag: tag)
+      end
+    end
+    redirect_to apparels_path
   end
 
   private
 
   def apparel_params
-    params.require(:apparel).permit(:style, :image_url)
+    params.require(:apparel).permit(:style)
   end
 
 end

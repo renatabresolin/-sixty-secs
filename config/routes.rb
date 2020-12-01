@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   get 'tags/index'
-  get 'apparels/index'
-  get 'apparels/new'
   devise_for :users
   root to: 'pages#home'
   resources :apparels

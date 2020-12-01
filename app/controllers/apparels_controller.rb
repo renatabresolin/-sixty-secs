@@ -14,6 +14,10 @@ class ApparelsController < ApplicationController
     @apparel = Apparel.find(params[:id])
   end
 
+  def show
+    @apparel = Apparel.find(params[:id])
+  end
+
   def new
     @apparel = Apparel.new
   end

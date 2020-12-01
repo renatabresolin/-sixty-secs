@@ -1,17 +1,13 @@
 <div class="container tag-container">
     <div class="row justify-content-center">
       <div class="col-sm-8 text-center">
-        <h3>Qual a ocasião?</h3>
           <% @tags.each do |tag| %>
             <div class="d-flex flex-wrap justify-content-center pt-4">
               <div class="clickable">
-                <i class="fas fa-tshirt"></i>
-
-           <small> <%= link_to tag.content, apparels_path(tag_id: tag.id) %>     </small>
+                <p> <%= tag.category %> <%= tag.content %>  </p>
               </div>
             </div>
           <% end %>
       </div>
     </div>
   </div>
-

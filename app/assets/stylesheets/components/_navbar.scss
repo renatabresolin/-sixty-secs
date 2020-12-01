@@ -1,12 +1,18 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.navbar-sixty-secs {
+    font-family: Andale Mono, monospace;
+    justify-content: space-between;
+    background: rgb(255, 192, 239);
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-sixty-secs .navbar-collapse {
+    flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-sixty-secs .navbar-brand img {
+    width: 55px;
+}
+
+.nav-item {
+    color: rgb(26, 26, 26);
+    background-color: rgb(255, 255, 73);
 }

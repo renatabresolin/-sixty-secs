@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-8 text-center">
+        <h3>Qual a ocasião?</h3>
+    <% @tags.each do |tag| %>
+        <div class="d-flex flex-wrap justify-content-center pt-4">
+          <div class="clickable">
+            <i class="fas fa-tshirt"></i>
+            <small> <%= tag.category[:ocasião] %>     </small>
+          </div>
+    <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+

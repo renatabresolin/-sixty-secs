@@ -1,6 +1,13 @@
 class ApparelsController < ApplicationController
   def index
-    @apparels = Apparel.all
+    @tag = Tag.where(id: params[:tag_id])
+    if @tag.present?
+      @apparels = Apparel.joins(:categories)
+                         .joins(:tags)
+                         .where(categories: { tag: @tag.first } )
+    else
+      @apparels = Apparel.all
+    end
   end
 
   def show

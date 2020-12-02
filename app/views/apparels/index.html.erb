@@ -10,15 +10,14 @@
     <% @apparels.each do |apparel| %>
       <div class="card-look">
         <div class="card-photo">
-<!--           <p>Foto aqui</p> -->
             <%= cl_image_tag apparel.photo.key, height: 300, width: 300, crop: :fill, class: "card-img-top" if apparel.photo.attached? %>
-          </div>
-          <div class="tags">
-            <% apparel.categories.each do |category| %>
-              <spam class="btn-ghost"><%= link_to category.tag.content, apparels_path(tag_id: tag.id)%></spam>
-            <% end %>
-          </div>
         </div>
+        <div class="tags">
+          <% apparel.categories.each do |category| %>
+            <spam class="btn-ghost"><%= link_to category.tag.content, apparels_path(tag_id: category.tag.id)%></spam>
+          <% end %>
+        </div>
+      </div>
     <% end %>
   </div>
 

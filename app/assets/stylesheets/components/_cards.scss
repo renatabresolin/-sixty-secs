@@ -1,49 +1,48 @@
-.cards {
+.container-card, .card-occasions {
+  grid-template-coluns: 1fr 1fr;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 15px;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.card-look {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 80%;
+}
+
+.card-photo {
+  border: 1px solid black;
+
 }
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
-  .cards {
+  .container-home {
     grid-template-columns: 1fr;
   }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .cards {
+  .container-home {
     grid-template-columns: 1fr;
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .cards {
+  .container-home {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-// .card-category {
-//     display: flex;
-//     flex-direction: row;
-//     padding-left: 0;
-//     margin-bottom: 0;
-//     align-items: center;
-//     text-decoration: none;
-// }

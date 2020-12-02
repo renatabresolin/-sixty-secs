@@ -1,19 +1,26 @@
 
-<div class="container">
   <% if @tag.present? %>
     <h2>Looks <%= @tag.first.category  %> <%= @tag.first.content  %></h2>
   <% else %>
     <h2>Todos LOOKS</h2>
   <% end %>
 
-  <div class="cards">
-    <div class="card-category">
-        <% @apparels.each do |apparel| %>
+
+  <div class="container-card">
+    <% @apparels.each do |apparel| %>
+      <div class="card-look">
+        <div class="card-photo">
+        <p>Foto aqui</p>
           <%= cl_image_tag apparel.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" if apparel.photo.attached? %>
-            <% apparel.categories.each do |category| %>
-              <spam class="btn-ghost"><%= link_to category.tag.content%></spam>
-            <% end %>
-        <% end %>
-    </div>
+        </div>
+        <div class="tags">
+          <% apparel.categories.each do |category| %>
+
+            <spam class="btn-ghost"><%= link_to category.tag.content%></spam>
+
+          <% end %>
+          </div>
+        </div>
+    <% end %>
   </div>
-</div>
+

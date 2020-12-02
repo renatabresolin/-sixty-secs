@@ -5,7 +5,7 @@
     <div class="tag-container">
       <% @tags.each do |tag| %>
           <div class="occasions">
-            <small> <%= link_to tag.content, apparels_path(tag_id: tag.id)%></small>
+            <p> <%= link_to tag.content, apparels_path(tag_id: tag.id)%></p>
           </div>
       <% end %>
     </div>

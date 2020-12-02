@@ -44,3 +44,56 @@
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
 }
+
+
+
+.btn-login {
+  width: 150px;
+  margin-bottom: 20px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 5px;
+    &:hover {
+    transition: .3s;
+    color: black;
+    text-decoration: none;
+  }
+};
+
+.btn-sing-up {
+  width: 150px;
+  margin-bottom: 20px;
+    &:hover {
+    transition: .3s;
+    color: black;
+    text-decoration: none;
+  }
+};
+
+a {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 150px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+      &:hover {
+    transition: .3s;
+    color: black;
+    text-decoration: none;
+  }
+}
+
+
+.form-actions {
+  text-align: center;
+  width: 150px;
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-top: 5px;
+      &:hover {
+    transition: .3s;
+    color: black;
+    text-decoration: none;
+  }
+}
+
+

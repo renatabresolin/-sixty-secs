@@ -1,4 +1,6 @@
 class ApparelsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
+
   def index
     @tag = Tag.where(id: params[:tag_id])
     if @tag.present?

@@ -15,6 +15,11 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
+
     <%= yield %>
+    <% unless request.path.match?(/[sign]/) %>
+      <%= render 'shared/footer' %>
+    <% end %>
+
   </body>
 </html>

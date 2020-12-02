@@ -1,0 +1,23 @@
+
+  <% if @tag.present? %>
+    <h2>Looks <%= @tag.first.category  %> <%= @tag.first.content  %></h2>
+  <% else %>
+    <h2>Todos LOOKS</h2>
+  <% end %>
+
+
+  <div class="container-card">
+    <% @apparels.each do |apparel| %>
+      <div class="card-look">
+        <div class="card-photo">
+            <%= cl_image_tag apparel.photo.key, height: 300, width: 300, crop: :fill, class: "card-img-top" if apparel.photo.attached? %>
+        </div>
+        <div class="tags">
+          <% apparel.categories.each do |category| %>
+            <spam class="btn-ghost"><%= link_to category.tag.content, apparels_path(tag_id: category.tag.id)%></spam>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+

@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'tags#index'
+  get 'tags/show/', to: "tags#show_tag"
   devise_for :users
-  root to: 'pages#home'
   resources :apparels
-
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

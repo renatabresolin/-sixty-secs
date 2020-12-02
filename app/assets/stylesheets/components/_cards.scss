@@ -1,0 +1,49 @@
+.container-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  // grid-gap: 15px;
+
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.card-look {
+  margin: 20px 50px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+
+}
+
+.card-photo {
+  border: 1px solid black;
+
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .container-home {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .container-home {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .container-home {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+

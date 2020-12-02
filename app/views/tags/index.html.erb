@@ -1,0 +1,17 @@
+<div class="banner" style="background-image: url(<%= image_path("backg-home.png") %>);">
+
+  <div class="home-cards">
+    <h3 class="text-center">Qual a ocasião?</h3>
+    <div class="tag-container">
+      <% @tags.each do |tag| %>
+          <div class="occasions">
+            <small> <%= link_to tag.content, apparels_path(tag_id: tag.id)%></small>
+          </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>
+
+
+

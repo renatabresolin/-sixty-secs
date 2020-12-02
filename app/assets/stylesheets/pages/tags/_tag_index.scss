@@ -1,0 +1,66 @@
+
+
+
+
+.tag-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin-top: 180px;
+  margin-right: 130px;
+  margin-left: 130px;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .tag-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .tag-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .tag-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+.occasions {
+  padding: 40px;
+  border: 1px solid #dedede;
+  color: #2E3192;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.occasions i {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.occasions:hover i {
+  color: black;
+}
+
+.occasions:hover {
+  color: black;
+  text-decoration: none;
+}
+

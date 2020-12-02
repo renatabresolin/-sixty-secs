@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <h1>Add new Style </h1>
+
+      <%= simple_form_for @apparel do |f| %>
+        <%= f.input :style, collection: Apparel::STYLES %>
+
+        <%= f.input :tags, collection: Tag.all.map { |tag| ["#{tag.category} #{tag.content}", tag.id] }, input_html: { multiple: true, class: 'multiple-select select2' }, include_hidden: false %>
+
+        <%= f.input :photo, as: :file %>
+
+        <%= f.submit "Add tag", class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>

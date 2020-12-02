@@ -24,3 +24,5 @@ tag_bio_2 = Tag.create!( category: "Biotipo", content: "Oval")
 tag_bio_3 = Tag.create!( category: "Biotipo", content: "Ampulheta")
 tag_bio_4 = Tag.create!( category: "Biotipo", content: "Pêra")
 tag_bio_5 = Tag.create!( category: "Biotipo", content: "Retângulo")
+
+

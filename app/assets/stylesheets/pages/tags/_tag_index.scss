@@ -1,42 +1,46 @@
-.tag-container {
-  // display: grid;
-  // grid-template-column: 1fr 1fr 1fr;
-  // grid-gap: 16px;
 
-  flex-direction: column;
-  margin-right: auto;
-  margin-left: auto;
-  height: 100vh;
+.home-cards {
+  margin: 60px;
+}
+
+
+
+.tag-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-right: 50px;
+  margin-left: 50px;
+  height: 60vh;
   justify-content: center;
   align-items: center;
   text-decoration: none;
 }
 
-// // Smallest device
-// @media (min-width: 100px) and (max-width: 575px) {
-//   .tag-container {
-//     grid-template-columns: 1fr;
-//   }
-// }
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .tag-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .tag-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .tag-container {
+    grid-template-columns: 1fr;
+  }
+}
 
-// // Small devices (landscape phones, 576px and up)
-// @media (min-width: 576px) {
-//   .tag-container {
-//     grid-template-columns: 1fr;
-//   }
-// }
 
-// // Medium devices (tablets, 768px and up)
-// @media (min-width: 768px) {
-//   .tag-container {
-//     grid-template-columns: 1fr 1fr;
-//   }
-// }
 
 
 .occasions {
   padding: 40px;
-  width: 180px;
   border: 1px solid #dedede;
   color: #2E3192;
   margin-right: 10px;

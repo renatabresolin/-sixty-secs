@@ -5,4 +5,5 @@
 <% end %>
 <%= link_to votings_path(like: true, apparel_id: @apparel.id), method: :post do%>
   <i class="far fa-thumbs-up"></i>
+<p><%= @apparel.style %></p>
 <% end %>

@@ -1,0 +1,8 @@
+<h1>Votings#new</h1>
+<%= cl_image_tag @apparel.photo.key %>
+<%= link_to votings_path(like: false, apparel_id: @apparel.id), method: :post do%>
+  <i class="far fa-thumbs-down"></i>
+<% end %>
+<%= link_to votings_path(like: true, apparel_id: @apparel.id), method: :post do%>
+  <i class="far fa-thumbs-up"></i>
+<% end %>

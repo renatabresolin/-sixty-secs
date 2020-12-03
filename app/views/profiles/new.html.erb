@@ -1,0 +1,11 @@
+<h1>Vamos definir seu estilo</h1>
+
+<%= simple_form_for @profile, url: profiles_path, method: :post do |f| %>
+<%= f.input :photo,
+                as: :file,
+                required: false,
+                autofocus: true,
+                input_html: { multiple: false } %>
+<%= f.submit 'OK' %>
+<%end%>
+<p>Find me in app/views/profiles/new.html.erb</p>

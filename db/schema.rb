@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_03_140737) do
+ActiveRecord::Schema.define(version: 2020_12_03_165446) do
+#ActiveRecord::Schema.define(version: 2020_12_03_140737) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,9 +82,21 @@ ActiveRecord::Schema.define(version: 2020_12_03_140737) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "votings", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "apparel_id", null: false
+    t.boolean "like"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["apparel_id"], name: "index_votings_on_apparel_id"
+    t.index ["user_id"], name: "index_votings_on_user_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "categories", "apparels"
   add_foreign_key "categories", "tags"
   add_foreign_key "recomendations", "apparels"
   add_foreign_key "recomendations", "users"
+  add_foreign_key "votings", "apparels"
+  add_foreign_key "votings", "users"
 end

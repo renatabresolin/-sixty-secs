@@ -36,9 +36,10 @@ class ApparelsController < ApplicationController
   end
 
   def update
-    if @apparel.user == current_user.admin
+    if current_user.admin?
+      @apparel = Apparel.find(params[:id])
       if @apparel.update(apparel_params)
-        redirect_to @apparels, notice: 'Successfully updated.'
+        redirect_to apparels_path, notice: 'Successfully updated.'
       else
         render :edit
       end

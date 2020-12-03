@@ -33,6 +33,7 @@ class ApparelsController < ApplicationController
 
   def edit
     @apparel = Apparel.find(params[:id])
+    @tags = @apparel.tags
   end
 
   def update

@@ -1,13 +1,13 @@
 .btn-ghost {
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
-  padding: 8px 20px;
-  border-radius: 20px;
+  padding: 10px;
+  border-radius: 8px;
   font-weight: lighter;
   opacity: 0.6;
   transition: opacity 0.3s ease;
   text-align: center;
-  font-size: 12px;
+  font-size: 18px;
   text-decoration: none;
     &:hover {
       opacity: 1;
@@ -15,6 +15,30 @@
       color: white;
     }
 }
+
+.tag-btn {
+  background-color: #00FFE6;
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 3px;
+  border-radius: 5px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  font-size: 10px;
+  text-decoration: none;
+    &:hover {
+      opacity: 1;
+      text-decoration: none;
+      color: white;
+    }
+}
+
+// .sexy {
+//   background-color: $sexy;
+//   color: white;
+// }
 
 
 .btn-flat {

@@ -31,6 +31,34 @@ class ApparelsController < ApplicationController
     redirect_to apparels_path
   end
 
+  def edit
+    @apparel = Apparel.find(params[:id])
+  end
+
+  def update
+    if @apparel.user == current_user.admin
+      if @apparel.update(apparel_params)
+        redirect_to @apparels, notice: 'Successfully updated.'
+      else
+        render :edit
+      end
+    else
+      redirect_to root_path, notice: 'No permition to edit.'
+    end
+  end
+
+
+
+  def destroy
+    @apparel = Apparel.find(params[:id])
+    if current_user.admin
+      @apparel.destroy
+      redirect_to apparels_path
+    else
+      redirect_to root_path
+    end
+  end
+
   private
 
   def apparel_params

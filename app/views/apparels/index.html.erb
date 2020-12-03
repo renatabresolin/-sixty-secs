@@ -19,8 +19,27 @@
             </div>
           <% end %>
         </div>
+        <% if current_user.admin %>
+            <p class = "edit">
+              <%= link_to 'Edit', edit_apparel_path(apparel) %>
+            </p>
+
+          <p><%= link_to apparel_path(apparel), method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="fas fa-trash-alt"></i>
+                <% end %></p>
+
+        <% end %>
+
       </div>
+
+
     <% end %>
+
+
+
+
+
+
   </div>
 
 </div>

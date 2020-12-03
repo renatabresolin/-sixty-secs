@@ -1,20 +1,22 @@
 <div class="container text-center">
   <% if @tag.present? %>
-    <h2 style="color: rgb(46, 49, 146);">Looks <%= @tag.first.category  %> <%= @tag.first.content  %></h2>
+    <h2 style="background-color: rgb(214, 246, 109)">Looks <%= @tag.first.category  %> <%= @tag.first.content  %></h2>
   <% else %>
-    <h2 style="color: rgb(46, 49, 146);">Todos LOOKS</h2>
+    <h2 style="background-color: rgb(214, 246, 109)">Todos LOOKS</h2>
   <% end %>
 
 
-  <div class="container-card">
+  <div class="container-card row">
     <% @apparels.each do |apparel| %>
-      <div class="card-look">
-        <div class="card-photo">
+      <div class="card-look col-12 col-md-4 align-items-center p-5 mr-3">
+        <div class="card-photo align-items-center">
             <%= cl_image_tag apparel.photo.key, height: 300, width: 300, crop: :fill, class: "card-img-top" if apparel.photo.attached? %>
         </div>
         <div class="tags">
           <% apparel.categories.each do |category| %>
-            <spam class="btn-ghost"><%= link_to category.tag.content, apparels_path(tag_id: category.tag.id)%></spam>
+            <div class="tag">
+              <spam class="tag-btn col-2 <%= category.tag.content.downcase %> "><%= link_to category.tag.content, apparels_path(tag_id: category.tag.id)%></spam>
+            </div>
           <% end %>
         </div>
       </div>

@@ -1,9 +1,27 @@
-<h1>Votings#new</h1>
-<%= cl_image_tag @apparel.photo.key %>
-<%= link_to votings_path(like: false, apparel_id: @apparel.id), method: :post do %>
-  <i class="far fa-thumbs-down"></i>
-<% end %>
-<%= link_to votings_path(like: true, apparel_id: @apparel.id), method: :post do %>
-  <i class="far fa-thumbs-up"></i>
-<p><%= @apparel.style %></p>
-<% end %>
+
+<div class="container text-center">
+
+  <h2 style="background-color: rgb(214, 246, 109)">HORA DO TINDER DA MODA 👗 💘 👠 </h2>
+  <h4 class="subtitle">Quais LOOKS você usaria?</h4><br>
+
+  <div class="card-tinder text-center d-flex">
+    <div class="photo-tinder">
+      <%= cl_image_tag @apparel.photo.key %>
+    </div>
+    <div class="likes-tinder mt-3">
+      <%= link_to votings_path(like: false, apparel_id: @apparel.id), method: :post do%>
+        <i class="far fa-thumbs-down"></i>
+      <% end %>
+
+      <%= link_to votings_path(like: true, apparel_id: @apparel.id), method: :post do%>
+        <i class="far fa-thumbs-up"></i>
+      <% end %>
+    </div>
+
+    <% if current_user.admin %>
+      <h4 class="subtitle"><%= @apparel.style%></h4>
+    <% end %>
+
+  </div>
+
+</div>

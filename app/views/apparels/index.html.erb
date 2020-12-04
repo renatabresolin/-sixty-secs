@@ -11,15 +11,15 @@
       <div class="card-look col-12 col-md-4 align-items-center p-5 mr-3">
         <div class="card-photo align-items-center">
             <%= cl_image_tag apparel.photo.key, height: 300, width: 300, crop: :fill, class: "card-img-top" if apparel.photo.attached? %>
-        </div>
+       </div>
         <div class="tags">
           <% apparel.categories.each do |category| %>
             <div class="tag">
-              <spam class="tag-btn col-2 <%= category.tag.content.downcase %> "><%= link_to category.tag.content, apparels_path(tag_id: category.tag.id)%></spam>
+              <span class="tag-btn col-2 <%= category.tag.content.downcase %> "><%= link_to category.tag.content, apparels_path(tag_id: category.tag.id)%></span>
             </div>
           <% end %>
         </div>
-        <% if current_user.admin %>
+        <% if current_user && current_user.admin %>
             <p class = "edit">
               <%= link_to 'Edit', edit_apparel_path(apparel) %>
             </p>

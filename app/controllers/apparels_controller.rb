@@ -6,7 +6,7 @@ class ApparelsController < ApplicationController
     if @tag.present?
       @apparels = Apparel.joins(:categories)
                          .joins(:tags)
-                         .where(categories: { tag: @tag.first } )
+                         .where(categories: { tag: @tag.first } ).uniq
     else
       @apparels = Apparel.all
     end

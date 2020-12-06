@@ -8,27 +8,23 @@
 
   <div class="container-card row">
     <% @apparels.each do |apparel| %>
-      <div class="card-look col-12 col-md-4 align-items-center p-5 mr-3">
+      <div class="card-look col-12 col-md-4 align-items-center p-2 mb-3 d-flex justify-content-between">
         <div class="card-photo align-items-center">
-            <%= cl_image_tag apparel.photo.key, height: 300, width: 300, crop: :fill, class: "card-img-top" if apparel.photo.attached? %>
+            <%= cl_image_tag apparel.photo.key, class: "card-img-top" if apparel.photo.attached? %>
        </div>
         <div class="tags">
           <% apparel.categories.each do |category| %>
             <div class="tag">
-              <span class="tag-btn col-2 <%= category.tag.content.downcase %> "><%= link_to category.tag.content, apparels_path(tag_id: category.tag.id)%></span>
+              <span class="tag-btn"><%= link_to category.tag.content, apparels_path(tag_id: category.tag.id)%></span>
             </div>
           <% end %>
         </div>
+        <div class="btns-admin d-flex">
         <% if current_user && current_user.admin %>
-            <p class = "edit">
-              <%= link_to 'Edit', edit_apparel_path(apparel) %>
-            </p>
-
-          <p><%= link_to apparel_path(apparel), method: :delete, data: { confirm: 'Are you sure?' } do %>
-                <i class="fas fa-trash-alt"></i>
-                <% end %></p>
-
+          <p class="edit m-2"><%= link_to 'Edit', edit_apparel_path(apparel) %></p>
+          <p class="delete m-2"><%= link_to 'Delete', apparel_path(apparel), method: :delete, data: { confirm: 'Are you sure?' }%></p>
         <% end %>
+        </div>
 
       </div>
 

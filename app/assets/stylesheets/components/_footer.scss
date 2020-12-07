@@ -1,4 +1,5 @@
 .footer {
+  font-family: Andale Mono, monospace;
     background: #F4F4F4;
     display: flex;
     align-items: center;
@@ -6,6 +7,10 @@
     height: 150px;
     padding: 0px 50px;
     color: rgba(0, 0, 0, 0.3);
+}
+
+.slogan h4 {
+  font-family: Andale Mono, monospace;
 }
 
 .footer-links {

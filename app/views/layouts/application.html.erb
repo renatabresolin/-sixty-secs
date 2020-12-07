@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= favicon_link_tag asset_path('logo.png') %>
+    <%= favicon_link_tag asset_path('logo-mini.png') %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
@@ -17,9 +17,9 @@
     <%= render 'shared/flashes' %>
 
     <%= yield %>
-    <% unless request.path.match?(/[sign]/) %>
+    <%# unless request.path.match?(/[sign]/) %>
       <%= render 'shared/footer' %>
-    <% end %>
+    <%# end %>
 
   </body>
 </html>

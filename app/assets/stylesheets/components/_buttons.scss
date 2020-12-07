@@ -18,27 +18,21 @@
 
 .tag-btn {
   background-color: #00FFE6;
-  color: #black;
+  color: black;
   border: 1px solid #4A4A4A;
   padding: 3px;
   border-radius: 5px;
-  font-weight: bold;
-  // opacity: 0.6;
+  font-weight: lighter;
   transition: opacity 0.3s ease;
   text-align: center;
-  font-size: 10px;
+  font-size: 15px;
   text-decoration: none;
     &:hover {
-      // opacity: 0.6;
       text-decoration: none;
       color: black;
     }
 }
 
-// .sexy {
-//   background-color: $sexy;
-//   color: white;
-// }
 
 
 .btn-flat {

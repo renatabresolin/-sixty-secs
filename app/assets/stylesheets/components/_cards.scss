@@ -1,64 +1,32 @@
-.container-card {
-  // display: grid;
-  // grid-template-columns: 1fr 1fr 1fr;
-  // grid-gap: 15px;
 
-}
 
 .tags {
-  // display: flex;
-  // flex-direction: row;
-  // width: 100%;
-  // padding: 10px;
-  justify-content: space-beetween;
+  padding: 10px;
   display: flex;
+  justify-content: space-beetween;
   flex-wrap: wrap;
+  margin-top: 25px;
 }
 
 .tag {
-
   padding: 2px;
-
-
 }
 
 .card-look {
   margin: 0 auto;
-  // display: flex;
   flex-direction: column;
-  background-image: asset-url('background-card.png');
-  background-size: 310px;
+  border: 1px solid gray;
+  background-size: 500px;
   background-repeat: no-repeat;
 
 }
 
 .card-photo {
-  border: 1px solid black;
-  width: 200px;
-  height: 300px;
+  width: 300px;
+  height: 400px;
   .card-img-top {
     object-fit: cover;
   }
 }
 
-// // Smallest device
-// @media (min-width: 100px) and (max-width: 575px) {
-//   .container-home {
-//     grid-template-columns: 1fr;
-//   }
-// }
-
-// // Small devices (landscape phones, 576px and up)
-// @media (min-width: 576px) {
-//   .container-home {
-//     grid-template-columns: 1fr;
-//   }
-// }
-
-// // Medium devices (tablets, 768px and up)
-// @media (min-width: 768px) {
-//   .container-home {
-//     grid-template-columns: 1fr 1fr;
-//   }
-// }
 

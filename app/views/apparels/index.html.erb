@@ -1,14 +1,14 @@
 <div class="container text-center">
   <% if @tag.present? %>
-    <h2 style="background-color: rgb(214, 246, 109)">Looks <%= @tag.first.category  %> <%= @tag.first.content  %></h2>
+    <h2 style="background-color: rgb(214, 246, 109)">Looks para <%= @tag.first.content  %></h2>
   <% else %>
-    <h2 style="background-color: rgb(214, 246, 109)">Todos LOOKS</h2>
+    <h2 style="background-color: rgb(214, 246, 109)">Todos os LOOKS</h2>
   <% end %>
 
 
-  <div class="container-card row">
+  <div class="container-card row m-3">
     <% @apparels.each do |apparel| %>
-      <div class="card-look col-12 col-md-4 align-items-center p-2 mb-3 d-flex justify-content-between">
+      <div class="card-look col-12 col-md-4 align-items-center p-2 mb-1 d-flex justify-content-between">
         <div class="card-photo align-items-center">
             <%= cl_image_tag apparel.photo.key, class: "card-img-top" if apparel.photo.attached? %>
        </div>
@@ -27,15 +27,6 @@
         </div>
 
       </div>
-
-
     <% end %>
-
-
-
-
-
-
   </div>
-
 </div>

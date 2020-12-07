@@ -8,6 +8,7 @@
     <div class="photo-tinder">
       <%= cl_image_tag @apparel.photo.key %>
     </div>
+
     <div class="likes-tinder mt-3">
       <%= link_to votings_path(like: false, apparel_id: @apparel.id), method: :post do%>
         <i class="far fa-thumbs-down"></i>

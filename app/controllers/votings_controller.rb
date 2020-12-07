@@ -1,4 +1,9 @@
 class VotingsController < ApplicationController
+
+  def index
+    # @apparel = current_user.style
+  end
+
   def new
     @voting = Voting.new
     voted_apparel_ids = current_user.votings.pluck(:apparel_id)
@@ -29,13 +34,13 @@ class VotingsController < ApplicationController
     if style_more_3_likes.present?
       current_user.style = style_more_3_likes
       current_user.save
-      redirect_to root_path
+      redirect_to votings_path
 
     elsif styles.count - disliked_styles.count == 1
       style = (styles - disliked_styles).first
       current_user.style = style
       current_user.save
-      redirect_to root_path
+      redirect_to votings_path
 
     else
       redirect_to new_voting_path

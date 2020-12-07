@@ -3,11 +3,12 @@
   <%= simple_form_for @apparel do |f| %>
     <div class="form-look">
 
+        <%= f.input :photo, as: :file %>
+
         <%= f.input :style, collection: Apparel::STYLES %>
 
         <%= f.input :tags, collection: Tag.all.map { |tag| ["#{tag.category} #{tag.content}", tag.id] }, input_html: { multiple: true, class: 'multiple-select select2' }, include_hidden: false %>
 
-        <%= f.input :photo, as: :file %>
 
         <%= f.submit "SALVAR", class: 'btn btn-ghost mt-3' %>
     </div>

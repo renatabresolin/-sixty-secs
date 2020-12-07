@@ -16,6 +16,26 @@
     }
 }
 
+.btn-check {
+  background-color: #413C9A;
+  border: 1px solid #4A4A4A;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  font-size: 15px;
+  text-decoration: none;
+  a {
+    color: white;
+    font-family: Andale Mono, monospace;
+  }
+    &:hover {
+      text-decoration: none;
+    }
+}
+
+
 .tag-btn {
   background-color: #00FFE6;
   color: black;
@@ -32,38 +52,6 @@
       color: black;
     }
 }
-
-
-
-.btn-flat {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
-  background: #1EDD88;
-  transition: background 0.3s ease;
-}
-
-.btn-flat:hover {
-  background: #1BCB7F;
-  color: white;
-}
-
-.btn-gradient {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
-  font-weight: bold;
-  background: linear-gradient(#167FFB, #0F60C4);
-  transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
-}
-
-.btn-gradient:hover {
-  background: linear-gradient(#147EFF, #0F67DA);
-  color: white;
-}
-
-
 
 .btn-login {
   width: 150px;

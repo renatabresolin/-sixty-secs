@@ -11,3 +11,16 @@
     }
 }
 
+.banner-gif {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 480px;
+    margin-right: auto;
+    margin-left: auto;
+    .match {
+      font-family: Andale Mono, monospace;
+      color: rgba(0, 0, 0, 0.5);
+      margin-top: 240px;
+    }
+}

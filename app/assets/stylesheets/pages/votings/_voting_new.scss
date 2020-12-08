@@ -1,16 +1,59 @@
+.check p {
+  font-family: Andale Mono, monospace;
+  font-size: 20px;
+  color: #212121;
+}
+
+.match {
+  color: #212121;
+}
+
+
+.title-tinder {
+  color: #212121;
+  background-color: rgb(214, 246, 109);
+}
 .subtitle {
   font-family: Andale Mono, monospace;
   font-size: 18px;
+  color: #212121;
 }
 
 .card-tinder {
-  display: flex;
-    position: relative;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
+  position: relative;
+  min-width: 0;
+  word-wrap: break-word;
 }
 
-.fa-thumbs-down, .fa-thumbs-up {
+.photo-tinder img {
+  width: 400px;
+  height: 500px;
+}
+
+.likes-tinder {
+  margin-top: 150px;
+  flex-direction: column;
+  li {
+    list-style: none;
+  }
+}
+
+.fa-thumbs-down {
   font-size: 30px;
+  background-color: red;
+  border-radius: 50%;
+  padding: 10px;
+    &:hover {
+    color: #212121
+  }
+}
+
+.fa-thumbs-up {
+  font-size: 30px;
+  background-color: green;
+  border-radius: 50%;
+  padding: 10px;
+  &:hover {
+    color: #212121
+  }
 }

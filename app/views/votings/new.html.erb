@@ -1,22 +1,28 @@
 
 <div class="container text-center">
 
-  <h2 style="background-color: rgb(214, 246, 109)">HORA DO TINDER DA MODA 👗 💘 👠 </h2>
-  <h4 class="subtitle">Quais LOOKS você usaria?</h4><br>
+  <h2 class="title-tinder">HORA DO TINDER DA MODA 👗 💘 👠 </h2>
+  <h4 class="subtitle">Agora vamos mapear seu estilo! Quais LOOKS você usaria?</h4><br>
 
-  <div class="card-tinder text-center d-flex">
+  <div class="card-tinder d-flex justify-content-center mb-3">
     <div class="photo-tinder">
       <%= cl_image_tag @apparel.photo.key %>
     </div>
 
-    <div class="likes-tinder mt-3">
-      <%= link_to votings_path(like: false, apparel_id: @apparel.id), method: :post do%>
-        <i class="far fa-thumbs-down"></i>
-      <% end %>
-
-      <%= link_to votings_path(like: true, apparel_id: @apparel.id), method: :post do%>
+    <div class="likes-tinder">
+      <ul>
+        <li> <%= link_to votings_path(like: true, apparel_id: @apparel.id), method: :post do%>
         <i class="far fa-thumbs-up"></i>
-      <% end %>
+        <% end %> </li> <br><br>
+
+        <li>  <%= link_to votings_path(like: false, apparel_id: @apparel.id), method: :post do%>
+        <i class="far fa-thumbs-down"></i>
+      <% end %> </li>
+      </ul>
+
+
+
+
     </div>
 
     <% if current_user.admin %>

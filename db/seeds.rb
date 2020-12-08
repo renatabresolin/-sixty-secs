@@ -19,7 +19,7 @@ tag_ss_1 = Tag.create!( category: "Estação", content: "Verão")
 tag_ss_2 = Tag.create!( category: "Estação", content: "Inverno")
 tag_ss_3 = Tag.create!( category: "Estação", content: "Meia-estação")
 
-tag_bio_1 = Tag.create!( category: "Biotipo", content: "Corpo Triangular")
+tag_bio_1 = Tag.create!( category: "Biotipo", content: "Corpo Triângulo Invertido")
 tag_bio_2 = Tag.create!( category: "Biotipo", content: "Corpo Oval")
 tag_bio_3 = Tag.create!( category: "Biotipo", content: "Corpo Ampulheta")
 tag_bio_4 = Tag.create!( category: "Biotipo", content: "Corpo Pêra")

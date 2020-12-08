@@ -1,7 +1,6 @@
 class VotingsController < ApplicationController
 
   def index
-    # @apparel = current_user.style
   end
 
   def new

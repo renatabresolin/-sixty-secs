@@ -52,8 +52,6 @@ class ApparelsController < ApplicationController
     end
   end
 
-
-
   def destroy
     @apparel = Apparel.find(params[:id])
     if current_user.admin

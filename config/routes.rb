@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :apparels
   resources :profiles, only: %i[new create]
   resources :votings, only: %i[index new create]
+  resources :biotypes, only: %i[index]
 end

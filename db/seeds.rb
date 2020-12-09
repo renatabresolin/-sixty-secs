@@ -1950,33 +1950,26 @@ apparel71.photo.attach(io: apparel_image,
                       content_type: "image/png")
 
 
-apparel72 = Apparel.create!(style: "Hipster")
+apparel73 = Apparel.create!(style: "Clássico")
 # Depois de cada apparel, criar categories para linkar as tags
-Category.create!(apparel: apparel72,
+Category.create!(apparel: apparel73,
                  tag: tag_oc_1)
-Category.create!(apparel: apparel72,
+Category.create!(apparel: apparel73,
                  tag: tag_oc_3)
-Category.create!(apparel: apparel72,
+Category.create!(apparel: apparel73,
                  tag: tag_oc_6)
-Category.create!(apparel: apparel72,
-                 tag: tag_oc_7)
-Category.create!(apparel: apparel72,
+Category.create!(apparel: apparel73,
                  tag: tag_oc_8)
-Category.create!(apparel: apparel72,
-                 tag: tag_ss_2)
-Category.create!(apparel: apparel72,
+Category.create!(apparel: apparel73,
+                 tag: tag_ss_1)
+Category.create!(apparel: apparel73,
                  tag: tag_ss_3)
-Category.create!(apparel: apparel72,
+Category.create!(apparel: apparel73,
                  tag: tag_bio_1)
-Category.create!(apparel: apparel72,
-                 tag: tag_bio_2)
-Category.create!(apparel: apparel72,
+Category.create!(apparel: apparel73,
                  tag: tag_bio_3)
-Category.create!(apparel: apparel72,
+Category.create!(apparel: apparel73,
                  tag: tag_bio_4)
-Category.create!(apparel: apparel72,
-                 tag: tag_bio_5)
-
 # pegar a imagem
 apparel_image = URI.open("https://res.cloudinary.com/ckalache/image/upload/v1607398032/outfits-57_oicvi2.png")
 # adicionar a imagem ao apparel

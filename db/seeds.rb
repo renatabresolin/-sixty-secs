@@ -67,7 +67,6 @@ apparel_image = URI.open("https://res.cloudinary.com/ckalache/image/upload/v1607
 apparel2.photo.attach(io: apparel_image,
                       filename: "apparel_#{apparel2.id}.png",
                       content_type: "image/png")
-
 # Criar os apparels
 apparel3 = Apparel.create!(style: "Clássico")
 # Depois de cada apparel, criar categories para linkar as tags
@@ -1164,7 +1163,6 @@ Category.create!(apparel: apparel44,
                  tag: tag_oc_1)
 Category.create!(apparel: apparel44,
                  tag: tag_oc_3)
-                 tag: tag_oc_6)
 Category.create!(apparel: apparel44,
                  tag: tag_oc_7)
 Category.create!(apparel: apparel44,
@@ -1980,34 +1978,6 @@ Category.create!(apparel: apparel72,
                  tag: tag_bio_5)
 
 # pegar a imagem
-apparel_image = URI.open("https://res.cloudinary.com/ckalache/image/upload/v1607398030/outfits-56_bnaako.png")
-# adicionar a imagem ao apparel
-apparel72.photo.attach(io: apparel_image,
-                      filename: "apparel_#{apparel72.id}.png",
-                      content_type: "image/png")
-
-apparel73 = Apparel.create!(style: "Clássico")
-# Depois de cada apparel, criar categories para linkar as tags
-Category.create!(apparel: apparel73,
-                 tag: tag_oc_1)
-Category.create!(apparel: apparel73,
-                 tag: tag_oc_2)
-Category.create!(apparel: apparel73,
-                 tag: tag_oc_6)
-Category.create!(apparel: apparel73,
-                 tag: tag_oc_8)
-Category.create!(apparel: apparel73,
-                 tag: tag_ss_1)
-Category.create!(apparel: apparel73,
-                 tag: tag_ss_3)
-Category.create!(apparel: apparel73,
-                 tag: tag_bio_1)
-Category.create!(apparel: apparel73,
-                 tag: tag_bio_3)
-Category.create!(apparel: apparel73,
-                 tag: tag_bio_4)
-
-# pegar a imagem
 apparel_image = URI.open("https://res.cloudinary.com/ckalache/image/upload/v1607398032/outfits-57_oicvi2.png")
 # adicionar a imagem ao apparel
 apparel73.photo.attach(io: apparel_image,
@@ -2374,7 +2344,7 @@ Category.create!(apparel: apparel87,
 Category.create!(apparel: apparel87,
                  tag: tag_oc_8)
 Category.create!(apparel: apparel87,
-                 tag: tag_ss_1))
+                 tag: tag_ss_1)
 Category.create!(apparel: apparel87,
                  tag: tag_ss_3)
 Category.create!(apparel: apparel87,

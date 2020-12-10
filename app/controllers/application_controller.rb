@@ -15,7 +15,11 @@ class ApplicationController < ActionController::Base
     new_voting_path
   end
 
-  # def default_url_options
-  # { host: ENV["DOMAIN"] || "sixty-secs.fan" }
-  # end
+  def default_url_options
+  { host: ENV["DOMAIN"] || "sixty-secs.fan" }
+  end
 end
+
+
+
+# heroku config:set DOMAIN=www.sixty-secs.fan -a sixty-secs

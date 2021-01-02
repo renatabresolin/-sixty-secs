@@ -1,5 +1,5 @@
 <h1 align="center"> 60 SECS </h1>
-<h2 align="center"> Projeto Final Bootcamp Le Wagon :rocket: </h2>
+<h2 align="center"> Projeto Final Bootcamp Le Wagon - São Paulo 2020 :rocket: </h2>
 
 Website que ajuda mulheres a se vestirem de acordo com seu próprio estilo e biotipo, trazendo inspirações de looks personalizados.
 
@@ -22,4 +22,9 @@ Website que ajuda mulheres a se vestirem de acordo com seu próprio estilo e bio
 
 ## Deploy da Aplicação com HEROKU :dash:
 
->
+> https://sixty-secs.fun/
+
+## Desenvolvedores
+
+[<img src="https://avatars3.githubusercontent.com/u/72417551?s=400&u=9a75eccadf0b294ed272722396a668dcdc3a78b9&v=4" width=115 > <br> <sub> Carla Kalache </sub>](https://github.com/ckalache) | [<img src="https://avatars1.githubusercontent.com/u/70242792?v=4" width=115 > <br> <sub> Renata Bresolin </sub>](https://github.com/renatabresolin) | [<img src="https://avatars2.githubusercontent.com/u/70783827?s=400&u=ddaad64c5d5f0b8d8529cb9b585ba08d6f8aeff6&v=4" width=115 > <br> <sub> Matheus Kaiser Saliba </sub>](https://github.com/ausborgsp)
+| :---: | :---: | :---: |
